@@ -25,5 +25,22 @@ namespace MSTestForMoodAnalyzer
             //Assert
             Assert.AreEqual("sad", res);
         }
+        [TestMethod]
+        public void CheckNullException()
+        {
+            try
+            {
+                //Action
+                string res = moodAnalyzer.CheckMood(null);
+            }
+            catch (CustomMoodAnalyzerException mEx)
+            {
+                //Assert
+                Assert.AreEqual(ExceptionType.NULL_VALUE, mEx.extype);
+                Assert.AreEqual("message is null", mEx.Message);
+
+            }
+
+        }
     }
 }

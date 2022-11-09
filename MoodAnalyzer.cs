@@ -17,13 +17,26 @@ namespace MoodAnalyser
         {
             //msg : Hrishi is Happy for his new laptop
             //msg : Hrishi is Sad after getting bad marks
+            if (msg == null)
+            {
+                throw new CustomMoodAnalyzerException("message is null", ExceptionType.NULL_VALUE);
+            }
+
             if (msg.Contains("happy", StringComparison.OrdinalIgnoreCase))
             {
                 return "happy";
             }
-            else
+            else if (msg.Contains("sad", StringComparison.OrdinalIgnoreCase))
             {
                 return "sad";
+            }
+            else if (msg.Contains("null", StringComparison.OrdinalIgnoreCase))
+            {
+                return "Happy";
+            }
+            else
+            {
+                return null;
             }
         }
     }
