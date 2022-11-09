@@ -21,23 +21,20 @@ namespace MoodAnalyser
             {
                 throw new CustomMoodAnalyzerException("message is null", ExceptionType.NULL_VALUE);
             }
+            else if (msg.Length < 1)
+            {
+                throw new CustomMoodAnalyzerException("provided message is empty", ExceptionType.EMPTY_TYPE);
+            }
 
             if (msg.Contains("happy", StringComparison.OrdinalIgnoreCase))
             {
                 return "happy";
             }
-            else if (msg.Contains("sad", StringComparison.OrdinalIgnoreCase))
+            if (msg.Contains("sad", StringComparison.OrdinalIgnoreCase))
             {
                 return "sad";
             }
-            else if (msg.Contains("null", StringComparison.OrdinalIgnoreCase))
-            {
-                return "Happy";
-            }
-            else
-            {
-                return null;
-            }
+            return null;
         }
     }
 }
