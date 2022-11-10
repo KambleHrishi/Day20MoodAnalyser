@@ -67,5 +67,14 @@ namespace MSTestForMoodAnalyzer
 
             Assert.IsNotInstanceOfType(res_obj, typeof(MoodAnalyzer));
         }
+        [TestMethod]
+        public void InvokedMethod()
+        {
+            FactoryMood<MoodAnalyzer> myFact = new FactoryMood<MoodAnalyzer>();
+
+            string result = myFact.InvokeMood("Hrishi is happy after getting bad marks");
+            Assert.AreEqual("happy", result);
+        }
+
     }
 }

@@ -5,7 +5,7 @@
         public static void Main(string[]args)
         {
             MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-            Console.WriteLine(moodAnalyzer.CheckMood(""));
+            //Console.WriteLine(moodAnalyzer.CheckMood(""));
         }
     }
 }

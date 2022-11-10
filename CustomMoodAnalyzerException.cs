@@ -10,6 +10,8 @@ namespace MoodAnalyser
     {
         NULL_VALUE,
         EMPTY_TYPE,
+        CLASS_NOT_FOUND,
+        CONSTRUCTOR_NOT_FOUND,
     }
 
     public class CustomMoodAnalyzerException : Exception
