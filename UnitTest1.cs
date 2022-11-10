@@ -59,6 +59,13 @@ namespace MSTestForMoodAnalyzer
             }
 
         }
+        [TestMethod]
+        public void CheckObjWithDefaultConstructor()
+        {
+            FactoryMood<MoodAnalyzer> myFact = new FactoryMood<MoodAnalyzer>();
+            var res_obj = myFact.GetObjectByDefaultConstructor();
 
+            Assert.IsNotInstanceOfType(res_obj, typeof(MoodAnalyzer));
+        }
     }
 }

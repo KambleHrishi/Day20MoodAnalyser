@@ -6,12 +6,24 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyser
 {
+    public enum Mood
+    {
+        Happy,
+        sad,
+    }
+
     public class MoodAnalyzer
     {
-        public enum Mood
+        public string message;
+
+        public MoodAnalyzer()
         {
-            Happy,
-            sad
+            this.message = "";
+        }
+
+        public MoodAnalyzer(string msg)
+        {
+            this.message = msg;
         }
         public string CheckMood(string msg)
         {

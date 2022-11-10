@@ -11,6 +11,7 @@ namespace MoodAnalyser
         NULL_VALUE,
         EMPTY_TYPE,
     }
+
     public class CustomMoodAnalyzerException : Exception
     {
         public ExceptionType extype;
